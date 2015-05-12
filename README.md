@@ -13,8 +13,8 @@ CentOS6 + haproxy 1.5.2 + configurator support
 ### Example:
 
 ```
- docker run -d -e -e ETCDCTL_PEERS="172.17.42.1:4001" \
-	-e ETCDCTL_WATCH=/services/nginx/reload \
-	-e ETCDCTL_NOTIFY=/services/nginx/notify \
+ docker run -d -e ETCDCTL_PEERS="172.17.42.1:4001" \
+	-e ETCDCTL_WATCH=/services/haproxy/reload \
+	-e ETCDCTL_NOTIFY=/services/haproxy/notify \
 	--volumes-from=configurator varsy/centos6-haproxy
 ```
