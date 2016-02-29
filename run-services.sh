@@ -10,6 +10,9 @@ sed -i "s/#\$UDPServerRun/\$UDPServerRun/" /etc/rsyslog.conf
 cat <<EOF>>  /etc/rsyslog.d/haproxy.conf
 local2.*    /var/log/haproxy/haproxy.log
 EOF
+mkdir -p /var/log/haproxy/
+touch /var/log/haproxy/haproxy.log
+chmod 644 /var/log/haproxy/haproxy.log
 touch /root/.first_run
 fi
 
